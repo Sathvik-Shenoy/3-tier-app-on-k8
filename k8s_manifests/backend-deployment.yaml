@@ -2,12 +2,11 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: api
-  namespace: workshop
   labels:
     role: api
     env: demo
 spec:
-  replicas: 1
+  replicas: 2
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -23,7 +22,7 @@ spec:
     spec:
       containers:
       - name: api
-        image: public.ecr.aws/w8u5e4v2/workshop-backend:v1
+        image: sathvik29/back-img:latest
         imagePullPolicy: Always
         env:
           - name: MONGO_CONN_STR

@@ -1,10 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: workshop
   name: mongodb
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: mongodb
@@ -17,8 +16,6 @@ spec:
       - name: mongodb
         image: mongo:4.4.6
         command:
-            - "numactl"
-            - "--interleave=all"
             - "mongod"
             - "--wiredTigerCacheSizeGB"
             - "0.1"
