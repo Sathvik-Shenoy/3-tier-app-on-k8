@@ -10,7 +10,7 @@ metadata:
 spec:
   ingressClassName: alb
   rules:
-    - host: app.trainwithshubham.com
+    - host: app.tier3.com
       http:
         paths:
           - path: /api
