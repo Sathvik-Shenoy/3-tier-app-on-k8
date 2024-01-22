@@ -8,5 +8,5 @@ spec:
   ports:
   - name: mongodb-svc
     protocol: TCP
-    port: 27018
+    port: 27017
     targetPort: 27017
